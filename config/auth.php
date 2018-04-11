@@ -67,7 +67,7 @@ return [
     'providers' => [
         'users' => [
             'driver' => 'eloquent',
-            'model' => banco\User::class,
+            'model' => App\User::class,
         ],
 
         // 'users' => [

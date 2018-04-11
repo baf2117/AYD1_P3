@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::resource('Cuenta','CuentaController');
+
+
+ Route::resource('cuenta', 'CuentaController');
+Route::resource('usuario', 'UsuarioController');
+Route::resource('cuentausuario', 'CuentaUserController');
