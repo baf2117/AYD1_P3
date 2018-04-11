@@ -21,3 +21,7 @@ Route::resource('cuenta', 'CuentaController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('cuentausuario', 'CuentaUserController');
 Route::resource('login', 'loginController');
+Route::get('aux', function(){
+
+	return view('login.aux2');
+});

@@ -23,10 +23,10 @@ class LoginController extends Controller
   	$pin = $request['pin'];
     $usuario = $request['usuario'];
     $contra = $request['contra'];
-     $sentencia2="select count(*) from usuarios where user ='".$usuario. "' and PIN = ".$pin." and contra = '".$contra."';";
-     $cantidad = DB::select($sentencia2);
-
-     if($cantidad==0){
+    $sentencia2="select * from usuarios where user ='".$usuario. "' and PIN = ".$pin." and contra = '".$contra."';";
+    $cantidad = DB::select($sentencia2);
+    $tama = count($cantidad);
+    if($tama==0){
 
 return "<html lang=\"en\">
 <head>
@@ -59,7 +59,7 @@ return "<html lang=\"en\">
 </html>";
      }else{
 
-
+      return Redirect('/aux');
       //return view('principal.bienvenida') vista no implementada
      }
      
