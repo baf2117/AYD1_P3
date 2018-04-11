@@ -17,7 +17,7 @@ Route::get('/', function () {
 
 //Route::resource('Cuenta','CuentaController');
 
-
- Route::resource('cuenta', 'CuentaController');
+Route::resource('cuenta', 'CuentaController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('cuentausuario', 'CuentaUserController');
+Route::resource('login', 'loginController');
