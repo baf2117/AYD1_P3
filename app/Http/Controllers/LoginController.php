@@ -19,8 +19,8 @@ class LoginController extends Controller
 
   public function store(Request $request){
 
-  	
-  	$pin = $request['pin'];
+
+          $pin = $request['pin'];
     $usuario = $request['usuario'];
     $contra = $request['contra'];
     $sentencia2="select * from usuarios where user ='".$usuario. "' and PIN = ".$pin." and contra = '".$contra."';";
