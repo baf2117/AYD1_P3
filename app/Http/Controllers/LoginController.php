@@ -18,49 +18,35 @@ class LoginController extends Controller
   }
 
   public function store(Request $request){
-
-  	
-  	$pin = $request['pin'];
+     $request->session()->flush();
+    
+    $pin = $request['pin'];
     $usuario = $request['usuario'];
     $contra = $request['contra'];
     $sentencia2="select * from usuarios where user ='".$usuario. "' and PIN = ".$pin." and contra = '".$contra."';";
     $cantidad = DB::select($sentencia2);
     $tama = count($cantidad);
     if($tama==0){
+      $mensaje ="<strong>Warning!</strong>  El usuario no existe <a href=\"login\" class=\"alert-link\">Login </a>";
 
-return "<html lang=\"en\">
-<head>
-
-  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-  <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">
-  <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js\"></script>
-  <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>
-        <style type=\"text/css\">
-  #bg {
-  position: fixed;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-     }
-  </style>
-</head>
-<body>
-
-<div class=\"container\">
-<img id =\"bg\" src=\"/images/fondo.jpg\"/>
-  <div class=\"alert alert-success\">
-    <strong>Warning!</strong>  El usuario no existe <a href=\"login/index\" class=\"alert-link\">Login </a> 
-  </div>
-</div>
-
-</body>
-</html>";
+return view('Error.error',compact('mensaje'));
      }else{
 
-      return Redirect('/aux');
-      //return view('principal.bienvenida') vista no implementada
+      $request->session()->put('sesionuser', $usuario);
+      $request->session()->put('sesionpin', $pin);
+
+
+      $sentencia = "select nombre from usuarios where user ='".$usuario."';";
+      $nombre1 = DB::select($sentencia);
+      $nombre =  $nombre1[0]->nombre;  
+      $request->session()->put('sesionnombre', $nombre);
+
+      $sentencia = "select idUsuarios from usuarios where user ='".$usuario."';";
+      $nombre1 = DB::select($sentencia);
+      $nombre =  $nombre1[0]->idUsuarios;  
+      $request->session()->put('sesionid', $nombre);
+
+      return Redirect('mostrar');
      }
      
 

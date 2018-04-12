@@ -23,16 +23,66 @@
   width: 100%;
   height: 100%;
      }
+
+     ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+    color: white;
+}
   </style>
+
 </head>
  <body  >
+  <ul>
+  <li><a><?php
+  $value = Session::get('sesionnombre');
+echo "$value";
+?><br/><?php
+$value = Session::get('sesionuser');
+echo "$value";
+$value = Session::get('sesionnoc');
+echo "--$value";
+?></a></li>
+<li>
+  <a href="transferencias">Transferencias</a>
+</li>
+<li>
+  <a href="credito">Crédito</a>
+</li>
+<li>
+  <a href="debito">Débito</a>
+</li>
+<li>
+  <a href="mostrar">Cuenta</a>
+</li>
+<li>
+  <a href="saldo">Saldo</a>
+</li>
+
+</ul>
 
 
-        <div class="container">
-        <img id ="bg" src="/images/fondo.jpg"/>
-        <br>
-        <br>
-        <br>
+       <div class="container">
+      <img id ="bg" src="/images/fondo.jpg"/>
             @yield('content')
         </div>
 
