@@ -1,15 +1,5 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 Route::get('/', function () {
     return view('welcome');
@@ -21,6 +11,11 @@ Route::resource('cuenta', 'CuentaController');
 Route::resource('usuario', 'UsuarioController');
 Route::resource('cuentausuario', 'CuentaUserController');
 Route::resource('login', 'loginController');
+Route::resource('transferencias', 'TransferenciasController');
+Route::resource('mostrar', 'MostrarController');
+Route::resource('credito', 'CreditoController');
+Route::resource('debito', 'DebitoController');
+Route::resource('saldo', 'SaldoController');
 Route::get('aux', function(){
 
 	return view('login.aux2');
