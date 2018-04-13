@@ -17,6 +17,6 @@ $tama = count ($cuentas);
   </div>
         
     <br/>
-    {!!Form::submit('Elegir',['class'=>'btn btn-primary'])!!}
+    {!!Form::submit('Elegir',['class'=>'btn btn-primary','name'=>'elegir'])!!}
     {!!Form::close()!!}
     @endsection

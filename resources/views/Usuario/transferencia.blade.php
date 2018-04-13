@@ -20,10 +20,10 @@ $tama = count ($cuentas);
 
     <div class="form-group">
         {!!Form::label('monto','Monto:')!!}
-        {!!Form::text('monto',null,['class'=>'form-control','placeholder'=>'Monto a transferir'])!!}
+        {!!Form::text('monto',null,['class'=>'form-control','placeholder'=>'Monto a transferir','name'=>'monto'])!!}
     </div>
         
     <br/>
-    {!!Form::submit('Transferir',['class'=>'btn btn-primary'])!!}
+    {!!Form::submit('Transferir',['class'=>'btn btn-primary','name'=>'transferir'])!!}
     {!!Form::close()!!}
     @endsection

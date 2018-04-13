@@ -49,7 +49,7 @@ class DebitoController extends Controller
       DB::insert($sentencia2);
      DB::commit();
      
-     return Redirect('debito');
+     return Redirect('saldo');
 
      }else{
   $mensaje ="<strong>Warning!</strong> No se cuenta con el saldo suficiente para realizar la transaccion <a href=\"debito\" class=\"alert-link\">Regresar </a>";

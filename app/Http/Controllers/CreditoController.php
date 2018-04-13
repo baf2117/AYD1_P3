@@ -48,7 +48,7 @@ class CreditoController extends Controller
       DB::insert($sentencia2);
      DB::commit();
      
-     return Redirect('credito');
+     return Redirect('saldo');
 
      }else{
   $mensaje ="<strong>Warning!</strong> No se cuenta con el saldo suficiente para realizar la transaccion <a href=\"credito\" class=\"alert-link\">Regresar </a>";

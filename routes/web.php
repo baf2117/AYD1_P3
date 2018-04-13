@@ -16,6 +16,7 @@ Route::resource('mostrar', 'MostrarController');
 Route::resource('credito', 'CreditoController');
 Route::resource('debito', 'DebitoController');
 Route::resource('saldo', 'SaldoController');
+Route::resource('registro', 'RegistroController');
 Route::get('aux', function(){
 
 	return view('login.aux2');

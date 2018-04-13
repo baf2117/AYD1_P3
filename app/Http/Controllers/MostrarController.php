@@ -13,7 +13,7 @@ class MostrarController extends Controller
       public function index(){
      $value = Session::get('sesionid');
 
-	 $sentencia2="Select id_cuenta from usuario_cuenta where id_usuario";
+	 $sentencia2="Select id_cuenta from usuario_cuenta where id_usuario =".$value.";";
      $cuentas = DB::Select($sentencia2);
  
     return view('cuenta.mostrar',compact('cuentas'));

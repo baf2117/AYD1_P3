@@ -25,10 +25,10 @@ $tama = count ($cuentas);
     <div class="form-group">
         {!!Form::label('des','Descripcion:')!!}
         <br/>
-        {!!Form::textarea('des',null,['class'=>'form-control','placeholder'=>'Descripcion transferencia'])!!}
+        {!!Form::textarea('des',null,['class'=>'form-control','placeholder'=>'Descripcion transferencia','name'=>'des'])!!}
     </div>
         
     <br/>
-    {!!Form::submit('Acreditar',['class'=>'btn btn-primary'])!!}
+    {!!Form::submit('Acreditar',['class'=>'btn btn-primary','name'=>'credito'])!!}
     {!!Form::close()!!}
     @endsection
