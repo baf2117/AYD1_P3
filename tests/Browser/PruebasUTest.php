@@ -29,25 +29,28 @@ class PruebasUTest extends DuskTestCase
                     ->press('elegir')
                     ->assertPathIs('/transferencias');
 
+           $browser ->visit('/saldo')
+                    ->assertSee('Q 5120.00');
+
            $browser->visit('/transferencias')
                     ->select ('cuenta','2')
                     ->type ('monto','50')
                     ->press('transferir')
-                    ->assertPathIs('/transferencias');
+                    ->assertPathIs('/saldo');
 
             $browser->visit('/credito')
                     ->select ('cuenta','2')
                     ->type ('monto','50')
                     ->type ('des','descripcion prueba unitaria')
                     ->press('credito')
-                    ->assertPathIs('/transferencias');
+                    ->assertPathIs('/saldo');
 
             $browser->visit('/debito')
                     ->select ('cuenta','2')
                     ->type ('monto','50')
                     ->type ('des','descripcion prueba unitaria')
                     ->press('debito')
-                    ->assertPathIs('/transferencias');
+                    ->assertPathIs('/saldo');
         });
     }
 

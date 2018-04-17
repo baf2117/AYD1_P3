@@ -29,7 +29,7 @@ class LoginController extends Controller
     $cantidad = DB::select($sentencia2);
     $tama = count($cantidad);
     if($tama==0){
-      $mensaje ="<strong>Warning!</strong>  El usuario no existe <a href=\"login\" class=\"alert-link\">Login </a>";
+      $mensaje ="<strong>Warning!</strong>  El usuario no existe <a href=\"login\" class=\"alert-link\">Login </a> Desea Registrarse <a href=\"registro\" class=\"alert-link\">Registro </a>";
 
 return view('Error.error',compact('mensaje'));
      }else{

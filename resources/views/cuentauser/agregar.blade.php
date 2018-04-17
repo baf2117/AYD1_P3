@@ -1,4 +1,4 @@
-@extends('layouts.admin');
+@extends('layouts.admin')
         @section('content')
 
     {!!Form::open(['route'=>'cuentausuario.store', 'method'=>'POST'])!!}

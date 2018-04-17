@@ -1,6 +1,6 @@
 set terminal png size 600
-set output "resultados.png"
-set title "100 peticiones, 20 peticiones concurrentes"
+set output "pruebas_carga.png"
+set title "100 peticiones, 20 usuarios concurrentes"
 set size ratio 0.6
 set grid y
 set xlabel "peticiones"

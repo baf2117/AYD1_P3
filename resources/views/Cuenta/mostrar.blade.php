@@ -1,9 +1,9 @@
-@extends('layouts.inicio');
+@extends('layouts.inicio')
 		@section('content')
 
 		    {!!Form::open(['route'=>'mostrar.store', 'method'=>'POST'])!!}
 	<div>	    
-    {!!Form::label('cuenta','Usuario:')!!}
+    {!!Form::label('cuenta','Cuenta:')!!}
           <select name="cuenta" class="form-control">
  <?php
 $tama = count ($cuentas); 
