@@ -29,8 +29,6 @@ class PruebasUTest extends DuskTestCase
                     ->press('elegir')
                     ->assertPathIs('/transferencias');
 
-           $browser ->visit('/saldo')
-                    ->assertSee('Q 5170.00');
 
            $browser->visit('/transferencias')
                     ->select ('cuenta','2')
