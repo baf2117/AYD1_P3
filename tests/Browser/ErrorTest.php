@@ -23,7 +23,7 @@ class ErrorTest extends DuskTestCase
                     ->type ('contra','123456')
                     ->type ('pin','2117')
                     ->press('ingresar')
-                    ->assertPathIs('/login');
+                    ->assertPathIs('/login'); 
 
             $browser ->visit('/login')
                     ->type ('usuario','baf21')
