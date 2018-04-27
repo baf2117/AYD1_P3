@@ -3,7 +3,7 @@
 
         <h2> Debito</h2>
 
-	{!!Form::open(['route'=>'transferencias.store', 'method'=>'POST'])!!}
+	{!!Form::open(['route'=>'debito.store', 'method'=>'POST'])!!}
 	<div>	    
     {!!Form::label('cuenta','Cuenta:')!!}
           <select name="cuenta" class="form-control">

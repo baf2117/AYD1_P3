@@ -2,7 +2,7 @@
 		@section('content')
     <h2>Credito</h2>
 
-		    {!!Form::open(['route'=>'transferencias.store', 'method'=>'POST'])!!}
+		    {!!Form::open(['route'=>'credito.store', 'method'=>'POST'])!!}
 	<div>	    
     {!!Form::label('cuenta','Cuenta:')!!}
           <select name="cuenta" class="form-control">
