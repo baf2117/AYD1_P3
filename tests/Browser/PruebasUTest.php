@@ -22,7 +22,7 @@ class PruebasUTest extends DuskTestCase
                     ->type ('contra','123456')
                     ->type ('pin','2117')
                     ->press('ingresar')
-                    ->assertPathIs('/mostrar');
+                    ->assertPathIs('/mostrar'); 
 
             $browser ->visit('/mostrar')
                     ->select ('cuenta','1')
