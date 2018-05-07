@@ -27,7 +27,7 @@ class PruebasUTest extends DuskTestCase
             $browser ->visit('/mostrar')
                     ->select ('cuenta','1')
                     ->press('elegir')
-                    ->assertPathIs('/transferencias');
+                    ->assertPathIs('/mostrar');
 
 
            $browser->visit('/transferencias')
