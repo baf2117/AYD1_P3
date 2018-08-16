@@ -24,6 +24,7 @@ class UsuarioController extends Controller
      $sentencia2="INSERT INTO usuarios (user, Nombre,Correo, contra,PIN) VALUES ('".$usuario."', '".$nombre."', NULL, NULL, NULL);";
      DB::insert($sentencia2);
      DB::commit();
+     DB::commit();
     
 }
 }
